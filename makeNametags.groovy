@@ -68,6 +68,10 @@ title =  title.movey(-5)
 
 cutout = cutout.toXMin().toYMin().movez(cube.getMinZ()).movex(((cube.getMinX()+cube.getMaxX())/2)-((cutout.getMinX()+cube.getMaxX())/2)-3.5).movey(((cube.getMinY()+cube.getMaxY())/2)-((cutout.getMinY()+cube.getMaxY())/2)+2.5)
 cube = cube.difference(cutout);
+File dir = new File(ScriptingEngine.getWorkspace().getAbsolutePath()+"/nametags/")
+if(!dir.exists()){
+	dir.mkdir()
+}
 
 if(Made.contains(name)){
 	 fileName = ScriptingEngine.getWorkspace().getAbsolutePath()+"/nametags/"+name+index+".stl";
